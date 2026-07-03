@@ -1,126 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SOLPULSE - The Pulse of Solana</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body{
-            background:#050510;
-            color:white;
-            font-family:Arial,sans-serif;
-            text-align:center;
-        }
+<title>SOLPULSE - The Pulse of Solana</title>
 
-        .hero{
-            padding:80px 20px;
-            background:linear-gradient(180deg,#090018,#050510);
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        h1{
-            font-size:70px;
-            background:linear-gradient(90deg,#a100ff,#00ffff);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-        }
+body{
+    background:#050510;
+    color:white;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
 
-        h2{
-            margin-top:15px;
-            color:#00ffff;
-        }
+.hero{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top left,#6a00ff55,transparent 40%),
+    radial-gradient(circle at top right,#00ffff33,transparent 40%),
+    #050510;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
 
-        p{
-            max-width:700px;
-            margin:20px auto;
-            font-size:20px;
-            line-height:1.6;
-        }
+.logo{
+    font-size:90px;
+    font-weight:900;
+    background:linear-gradient(90deg,#ffffff,#9c4dff,#00ffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        .button{
-            display:inline-block;
-            margin:10px;
-            padding:15px 30px;
-            border-radius:30px;
-            background:#7b2cff;
-            color:white;
-            text-decoration:none;
-            font-weight:bold;
-        }
+.subtitle{
+    color:#00ffff;
+    font-size:36px;
+    margin-top:20px;
+}
 
-        .section{
-            padding:60px 20px;
-        }
+.tagline{
+    margin-top:30px;
+    font-size:22px;
+    max-width:800px;
+    line-height:1.6;
+}
 
-        .card{
-            background:#111122;
-            max-width:800px;
-            margin:auto;
-            padding:30px;
-            border-radius:20px;
-            border:1px solid #7b2cff;
-        }
+.buttons{
+    margin-top:50px;
+}
 
-        footer{
-            padding:40px;
-            color:#888;
-        }
-    </style>
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:18px 35px;
+    background:linear-gradient(90deg,#8a2be2,#00ffff);
+    border-radius:40px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(138,43,226,.5);
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.card{
+    background:#0f1022;
+    border:1px solid #7b2cff;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 0 20px rgba(123,44,255,.2);
+}
+
+h2{
+    color:#00ffff;
+    margin-bottom:20px;
+}
+</style>
 </head>
 
 <body>
 
 <section class="hero">
-    <h1>SOLPULSE</h1>
-    <h2>THE PULSE OF SOLANA</h2>
 
-    <p>
-        Fast. Powerful. Decentralized.
-        A community-driven token built on Solana,
-        focused on transparency and long-term growth.
-    </p>
+<div class="logo">
+SOLPULSE
+</div>
 
-    <a class="button"
-    href="https://pump.fun/coin/BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt">
-    BUY ON PUMP.FUN
-    </a>
+<div class="subtitle">
+THE PULSE OF SOLANA
+</div>
 
-    <a class="button"
-    href="https://t.me/solpulsecoin">
-    JOIN TELEGRAM
-    </a>
+<div class="tagline">
+Fast. Powerful. Decentralized.
+<br><br>
+A community-driven token built on Solana,
+focused on transparency and long-term growth.
+</div>
+
+<div class="buttons">
+
+<a class="btn"
+href="https://pump.fun/coin/BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt">
+BUY ON PUMP.FUN
+</a>
+
+<a class="btn"
+href="https://t.me/solpulsecoin">
+JOIN TELEGRAM
+</a>
+
+<a class="btn"
+href="https://x.com/SOLPULSESOL">
+FOLLOW X
+</a>
+
+</div>
+
 </section>
 
 <section class="section">
-    <div class="card">
-        <h2>Official Contract Address</h2>
-        <br>
-        <p>
-        BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt
-        </p>
-    </div>
-</section>
 
-<section class="section">
-    <div class="card">
-        <h2>Roadmap</h2>
-        <br>
-        <p>
-        ✅ Phase 1: Foundation<br>
-        🚀 Phase 2: Growth<br>
-        🌍 Phase 3: Future Development
-        </p>
-    </div>
-</section>
+<div class="card">
+<h2>Official Contract Address</h2>
 
-<footer>
-    SOLPULSE © 2026 | Fast. Powerful. Decentralized.
-</footer>
+<p>
+BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt
+</p>
+</div>
+
+<div class="card">
+<h2>About SOLPULSE</h2>
+
+<p>
+SOLPULSE is a community-driven Solana project built around transparency,
+community participation, and long-term ecosystem growth.
+</p>
+</div>
+
+<div class="card">
+<h2>Token Information</h2>
+
+<p>
+Token: SOLPULSE ($PULSE)<br>
+Blockchain: Solana<br>
+Supply: 1,000,000,000<br>
+Launch Platform: Pump.fun
+</p>
+</div>
+
+</section>
 
 </body>
 </html>
