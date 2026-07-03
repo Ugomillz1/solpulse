@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOLPULSE - The Pulse of Solana</title>
+<title>SOLPULSE | The Pulse of Solana</title>
 
 <style>
 *{
@@ -15,8 +15,23 @@ font-family:Arial,sans-serif;
 
 body{
 background:#050510;
-color:white;
+color:#fff;
 overflow-x:hidden;
+line-height:1.6;
+}
+
+body::before{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(153,0,255,.25),transparent 30%),
+radial-gradient(circle at 80% 10%,rgba(0,255,255,.18),transparent 30%),
+radial-gradient(circle at 50% 80%,rgba(153,0,255,.15),transparent 40%);
+z-index:-1;
 }
 
 .hero{
@@ -26,54 +41,60 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:50px 20px;
-background:
-radial-gradient(circle at center,#2d0b55 0%,#0b0b1e 60%,#000 100%);
+padding:40px 20px;
+}
+
+.pulse{
+font-size:30px;
+color:#00ffff;
+margin-bottom:20px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:.4}
+50%{opacity:1}
+100%{opacity:.4}
 }
 
 .logo{
 font-size:80px;
 font-weight:900;
-background:linear-gradient(90deg,#ffffff,#a855f7,#06f7ff);
+background:linear-gradient(90deg,#fff,#b84dff,#00ffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-bottom:10px;
+text-shadow:0 0 20px #8a2be2;
 }
 
 .subtitle{
-font-size:38px;
+font-size:30px;
+color:#00ffff;
+margin-top:15px;
 font-weight:bold;
-color:#53ffe8;
-margin-bottom:30px;
 }
 
 .tagline{
+margin-top:20px;
 font-size:22px;
-margin-bottom:20px;
-}
-
-.desc{
 max-width:800px;
-font-size:20px;
-line-height:1.7;
-margin-bottom:40px;
 }
 
 .buttons{
+margin-top:40px;
 display:flex;
-gap:20px;
 flex-wrap:wrap;
 justify-content:center;
+gap:15px;
 }
 
 .btn{
-padding:16px 30px;
+padding:15px 30px;
 border-radius:50px;
 text-decoration:none;
+color:#fff;
 font-weight:bold;
-color:white;
-background:linear-gradient(90deg,#8b2cff,#00f0ff);
-box-shadow:0 0 20px rgba(0,255,255,.4);
+background:linear-gradient(90deg,#7b2cff,#00ffff);
+box-shadow:0 0 20px rgba(123,44,255,.5);
 transition:.3s;
 }
 
@@ -81,64 +102,73 @@ transition:.3s;
 transform:scale(1.05);
 }
 
-.section{
-padding:80px 20px;
+.container{
 max-width:1200px;
 margin:auto;
+padding:80px 20px;
 }
 
 .card{
 background:#0d1025;
-padding:40px;
+padding:35px;
+margin-bottom:30px;
 border-radius:20px;
-border:1px solid #5d3cff;
-box-shadow:0 0 30px rgba(128,0,255,.2);
-margin-bottom:40px;
+border:1px solid rgba(123,44,255,.4);
+box-shadow:0 0 25px rgba(123,44,255,.15);
 }
 
 h2{
-font-size:36px;
-margin-bottom:25px;
-background:linear-gradient(90deg,#b455ff,#00f0ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+color:#00ffff;
+margin-bottom:20px;
+font-size:32px;
 }
 
-.contract{
-word-break:break-all;
-font-size:18px;
-background:#141832;
-padding:20px;
-border-radius:10px;
-margin-top:20px;
-}
-
-.roadmap{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.phase{
+.small-card{
 background:#141832;
-padding:25px;
+padding:20px;
 border-radius:15px;
+text-align:center;
 }
 
-.phase h3{
-color:#00f0ff;
-margin-bottom:15px;
+.small-card h3{
+color:#00ffff;
+margin-bottom:10px;
+}
+
+.contract{
+background:#141832;
+padding:20px;
+border-radius:10px;
+word-break:break-all;
+margin-top:20px;
 }
 
 .footer{
-padding:40px;
+padding:50px 20px;
 text-align:center;
 background:#020208;
+margin-top:60px;
 }
 
 .footer a{
-color:#00f0ff;
+color:#00ffff;
 text-decoration:none;
+margin:0 10px;
+}
+
+@media(max-width:768px){
+.logo{
+font-size:50px;
+}
+.subtitle{
+font-size:22px;
+}
 }
 </style>
 </head>
@@ -147,17 +177,21 @@ text-decoration:none;
 
 <section class="hero">
 
-<div class="logo">SOLPULSE</div>
+<div class="pulse">
+💓 ───╱╲───╱╲───╱╲─── 💓
+</div>
+
+<div class="logo">
+SOLPULSE
+</div>
 
 <div class="subtitle">
 THE PULSE OF SOLANA
 </div>
 
 <div class="tagline">
-Fast. Powerful. Decentralized.
-</div>
-
-<div class="desc">
+FAST. POWERFUL. DECENTRALIZED.
+<br><br>
 A community-driven token built on Solana,
 focused on transparency, public development,
 and long-term ecosystem growth.
@@ -167,33 +201,27 @@ and long-term ecosystem growth.
 
 <a class="btn"
 href="https://pump.fun/coin/BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt">
-BUY ON PUMP.FUN
+🚀 BUY ON PUMP.FUN
 </a>
 
 <a class="btn"
 href="https://t.me/solpulsecoin">
-JOIN TELEGRAM
+💬 TELEGRAM
 </a>
 
 <a class="btn"
 href="https://x.com/SOLPULSESOL">
-FOLLOW X
+🐦 FOLLOW X
 </a>
 
 </div>
 
 </section>
 
-
-<section class="section">
+<div class="container">
 
 <div class="card">
-
 <h2>Official Contract Address</h2>
-
-<p>
-Official SOLPULSE contract on Solana:
-</p>
 
 <div class="contract">
 BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt
@@ -201,100 +229,155 @@ BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt
 
 </div>
 
-
 <div class="card">
-
 <h2>About SOLPULSE</h2>
 
-<p style="font-size:18px;line-height:1.8;">
-SOLPULSE is a community-driven Solana token
-built with transparency and long-term growth
-as its foundation.
-
-The project is being developed publicly,
-allowing the community to participate in
-its evolution from the earliest stages.
+<p>
+SOLPULSE is a community-driven Solana project
+focused on transparency, community participation,
+and long-term ecosystem growth.
+The project is being built publicly,
+allowing the community to participate
+from the earliest stages.
 </p>
 
 </div>
 
-
 <div class="card">
-
-<h2>Roadmap</h2>
-
-<div class="roadmap">
-
-<div class="phase">
-<h3>PHASE 1</h3>
-<p>✅ Token Launch</p>
-<p>✅ Pump.fun Listing</p>
-<p>✅ Twitter Launch</p>
-<p>✅ Telegram Community</p>
-<p>✅ Buy Alerts</p>
-<p>✅ Whitepaper</p>
-</div>
-
-<div class="phase">
-<h3>PHASE 2</h3>
-<p>🔄 Official Website</p>
-<p>🔄 Community Growth</p>
-<p>🔄 Marketing</p>
-<p>🔄 Partnerships</p>
-</div>
-
-<div class="phase">
-<h3>PHASE 3</h3>
-<p>🚀 Utility Development</p>
-<p>🚀 Governance</p>
-<p>🚀 Ecosystem Expansion</p>
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
 <h2>Token Information</h2>
 
-<p><b>Token:</b> SOLPULSE ($PULSE)</p>
-<br>
-<p><b>Network:</b> Solana</p>
-<br>
-<p><b>Supply:</b> 1,000,000,000</p>
-<br>
-<p><b>Model:</b> Community Driven</p>
+<div class="grid">
+
+<div class="small-card">
+<h3>Token</h3>
+<p>SOLPULSE ($PULSE)</p>
+</div>
+
+<div class="small-card">
+<h3>Network</h3>
+<p>Solana</p>
+</div>
+
+<div class="small-card">
+<h3>Supply</h3>
+<p>1,000,000,000</p>
+</div>
+
+<div class="small-card">
+<h3>Type</h3>
+<p>Community Driven</p>
+</div>
 
 </div>
 
-</section>
+</div>
 
-
-<div class="footer">
+<div class="card">
+<h2>Transparent Tokenomics</h2>
 
 <p>
-SOLPULSE © 2026
+✓ Total Supply: 1,000,000,000 PULSE<br>
+✓ Blockchain: Solana<br>
+✓ Distribution: Community Driven<br>
+✓ Ownership: Public On-Chain<br>
+✓ Launch Platform: Pump.fun
 </p>
 
-<br>
+</div>
 
-<a href="https://x.com/SOLPULSESOL">
-X / Twitter
+<div class="card">
+<h2>Roadmap</h2>
+
+<div class="grid">
+
+<div class="small-card">
+<h3>PHASE 1</h3>
+<p>
+✅ Launch<br>
+✅ Whitepaper<br>
+✅ Website<br>
+✅ Telegram
+</p>
+</div>
+
+<div class="small-card">
+<h3>PHASE 2</h3>
+<p>
+🚀 Marketing<br>
+🚀 Growth<br>
+🚀 Community<br>
+🚀 Partnerships
+</p>
+</div>
+
+<div class="small-card">
+<h3>PHASE 3</h3>
+<p>
+⚡ Utility<br>
+⚡ Governance<br>
+⚡ Ecosystem<br>
+⚡ Expansion
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+<h2>Community</h2>
+
+<div class="buttons">
+
+<a class="btn"
+href="https://x.com/SOLPULSESOL">
+X
 </a>
 
-|
-
-<a href="https://t.me/solpulsecoin">
+<a class="btn"
+href="https://t.me/solpulsecoin">
 Telegram
 </a>
 
-|
+<a class="btn"
+href="https://t.me/solpulselivebuys">
+Live Buy Alerts
+</a>
 
-<a href="https://pump.fun/coin/BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt">
+<a class="btn"
+href="https://pump.fun/coin/BYyMHRU9M3GLr2AVUSghTef8jPDfjejH3uekZK1TGDUt">
 Pump.fun
 </a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<h3>SOLPULSE</h3>
+
+<p>
+THE PULSE OF SOLANA
+</p>
+
+<br>
+
+<a href="https://x.com/SOLPULSESOL">X</a>
+|
+<a href="https://t.me/solpulsecoin">Telegram</a>
+|
+<a href="https://t.me/solpulselivebuys">Buy Alerts</a>
+
+<br><br>
+
+<p>
+© 2026 SOLPULSE
+<br>
+Community Driven • Built on Solana
+</p>
 
 </div>
 
